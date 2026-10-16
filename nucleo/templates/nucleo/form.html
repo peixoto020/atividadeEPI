@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Colaborador</title>
+</head>
+<body>
+
+    <h2>
+        {% if colaborador %}
+            Editar Colaborador
+        {% else %}
+            Novo Colaborador
+        {% endif %}
+    </h2>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Renderiza os campos do form (nome e telefone) automaticamente em parágrafos -->
+        {{ form.as_p }}
+
+        <button type="submit">Salvar</button>
+        <a href="{% url 'home' %}">Cancelar</a>
+    </form>
+
+</body>
+</html>

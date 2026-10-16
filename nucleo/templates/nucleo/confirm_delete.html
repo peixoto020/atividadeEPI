@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Exclusão</title>
+</head>
+<body>
+
+    <h2>Excluir Colaborador</h2>
+
+    <p>Tem certeza de que deseja excluir o colaborador <strong>"{{ colaborador.nome }}"</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, excluir</button>
+        <a href="{% url 'home' %}">Cancelar</a>
+    </form>
+
+</body>
+</html>
