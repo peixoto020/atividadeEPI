@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import home, criar_colaborador, editar_colaborador, excluir_colaborador
 
 urlpatterns = [
